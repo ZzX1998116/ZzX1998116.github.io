@@ -21,15 +21,15 @@
   <title>es6数组方法 - 三人必有我师</title>
 
   
-    <meta name="description" content="数组的扩展1.扩展运算符扩展运算符(spread)是三个点(…)。将一个数组转为用逗号分隔的参数序列 12345function f(v, w, x, y, z) &amp;#123;  return v+w+x+y+z &amp;#125;const args &#x3D; [0, 1];f(-1, ...args, 2, ...[3]); &#x2F;&#x2F;5 扩展运算符后面还能放置表达式 123let x&#x3D;2const arr &#x3D;">
+    <meta name="description" content="这里的是es6新增的数组扩展,很多不常用的整理一下方便查找">
 <meta property="og:type" content="article">
 <meta property="og:title" content="es6数组方法">
 <meta property="og:url" content="http://xvnixianshi.com/2022/10/09/arrayMethods/index.html">
 <meta property="og:site_name" content="三人必有我师">
-<meta property="og:description" content="数组的扩展1.扩展运算符扩展运算符(spread)是三个点(…)。将一个数组转为用逗号分隔的参数序列 12345function f(v, w, x, y, z) &amp;#123;  return v+w+x+y+z &amp;#125;const args &#x3D; [0, 1];f(-1, ...args, 2, ...[3]); &#x2F;&#x2F;5 扩展运算符后面还能放置表达式 123let x&#x3D;2const arr &#x3D;">
+<meta property="og:description" content="这里的是es6新增的数组扩展,很多不常用的整理一下方便查找">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-09T01:34:51.000Z">
-<meta property="article:modified_time" content="2022-10-09T08:41:26.429Z">
+<meta property="article:modified_time" content="2022-10-09T09:32:34.266Z">
 <meta property="article:author" content="Z&amp;M">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -91,11 +91,14 @@
 
 <article class='content md post'>
 <h1 class="article-title"><span>es6数组方法</span></h1>
+<p>这里的是es6新增的数组扩展,很多不常用的整理一下方便查找</p>
+<span id="more"></span>
+
 <h2 id="数组的扩展"><a href="#数组的扩展" class="headerlink" title="数组的扩展"></a>数组的扩展</h2><h3 id="1-扩展运算符"><a href="#1-扩展运算符" class="headerlink" title="1.扩展运算符"></a>1.扩展运算符</h3><p>扩展运算符(spread)是三个点(…)。将一个数组转为用逗号分隔的参数序列</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> f(v, w, x, y, z) &#123;</span><br><span class="line">  <span class="built_in">return</span> v+w+x+y+z</span><br><span class="line"> &#125;</span><br><span class="line">const args = [0, 1];</span><br><span class="line">f(-1, ...args, 2, ...[3]); //5</span><br></pre></td></tr></table></figure>
-<p>扩展运算符后面还能放置表达式</p>
+<p>扩展运算符后面还能放置表达式 <mark class="tag-plugin mark" color="purple">如果扩展运算符后面是一个空数组，则不产生任何效果</mark></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x=2</span><br><span class="line">const arr = [...(x &gt; 0 ? [<span class="string">&#x27;a&#x27;</span>] : []),<span class="string">&#x27;b&#x27;</span>];</span><br><span class="line">alert(arr) //a,b</span><br></pre></td></tr></table></figure>
-
+<mark class="tag-plugin mark" color="green">注意，只有函数调用时，扩展运算符才可以放在圆括号中，否则会报错</mark>
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a>许可协议，转载请注明出处。</p>
 </div></section></div>
