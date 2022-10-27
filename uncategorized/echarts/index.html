@@ -21,16 +21,16 @@
   <title>ECharts学习之路..... - 三人必有我师</title>
 
   
-    <meta name="description" content="ps:反正就是把所有标签的属性都整理记录一下，我记忆力差没办法记住那么多，用的时候对照着改就行了。好想摆烂啊！！！！">
+    <meta name="description" content="option参数   12345678910111213141516171819 var option &#x3D; &amp;#123;	title: &amp;#123;            &#x2F;&#x2F;图表的标题		text: &quot;vue成绩分析图&quot;	&amp;#125;,	legend: &amp;#123;           &#x2F;&#x2F;展现了不同系列的标记、颜色、名字		data: [&quot;成绩&quot;]	&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ECharts学习之路.....">
 <meta property="og:url" content="http://xvnixianshi.com/uncategorized/echarts/index.html">
 <meta property="og:site_name" content="三人必有我师">
-<meta property="og:description" content="ps:反正就是把所有标签的属性都整理记录一下，我记忆力差没办法记住那么多，用的时候对照着改就行了。好想摆烂啊！！！！">
+<meta property="og:description" content="option参数   12345678910111213141516171819 var option &#x3D; &amp;#123;	title: &amp;#123;            &#x2F;&#x2F;图表的标题		text: &quot;vue成绩分析图&quot;	&amp;#125;,	legend: &amp;#123;           &#x2F;&#x2F;展现了不同系列的标记、颜色、名字		data: [&quot;成绩&quot;]	&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xvnixianshi.com/uncategorized/echarts/2018041500134284.png">
 <meta property="article:published_time" content="2022-10-13T07:40:00.000Z">
-<meta property="article:modified_time" content="2022-10-14T07:26:18.584Z">
+<meta property="article:modified_time" content="2022-10-27T06:12:26.041Z">
 <meta property="article:author" content="Z&amp;M">
 <meta property="article:tag" content="图表">
 <meta property="article:tag" content="ECharts">
@@ -95,7 +95,6 @@
 
 <article class='content md post'>
 <h1 class="article-title"><span>ECharts学习之路.....</span></h1>
-<p>ps:反正就是把所有标签的属性都整理记录一下，我记忆力差没办法记住那么多，用的时候对照着改就行了。好想摆烂啊！！！！</p>
 <span id="more"></span>
 <h2 id="option"><a href="#option" class="headerlink" title="option"></a>option</h2><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3>   <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> var option = &#123;</span><br><span class="line">	title: &#123;            <span class="comment">//图表的标题</span></span><br><span class="line">		text: <span class="string">&quot;vue成绩分析图&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	legend: &#123;           <span class="comment">//展现了不同系列的标记、颜色、名字</span></span><br><span class="line">		data: [<span class="string">&quot;成绩&quot;</span>]</span><br><span class="line">	&#125;,</span><br><span class="line">	tooltip: &#123;&#125;,        <span class="comment">//提示框</span></span><br><span class="line">	xAxis: &#123;            <span class="comment">//直角坐标系grid中的x轴</span></span><br><span class="line">		data: [<span class="string">&quot;一&quot;</span>, <span class="string">&quot;二&quot;</span>, <span class="string">&quot;三&quot;</span>, <span class="string">&quot;四&quot;</span>]</span><br><span class="line">	&#125;,</span><br><span class="line">	yAxis: &#123;&#125;,          <span class="comment">//直角坐标系grid中的y轴</span></span><br><span class="line">	series: [&#123;          <span class="comment">//系列列表</span></span><br><span class="line">		type: <span class="string">&quot;bar&quot;</span>,      <span class="comment">//决定自己的图表类型</span></span><br><span class="line">		data: [<span class="string">&quot;80&quot;</span>, <span class="string">&quot;90&quot;</span>, <span class="string">&quot;70&quot;</span>, <span class="string">&quot;100&quot;</span>],</span><br><span class="line">		name: <span class="string">&#x27;成绩&#x27;</span></span><br><span class="line">	&#125;]</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 <h3 id="更新option"><a href="#更新option" class="headerlink" title="更新option"></a>更新option</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echart.setOption(option);</span><br></pre></td></tr></table></figure>
@@ -110,7 +109,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/uncategorized/arrayMethods/">ES6数组方法<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/uncategorized/MoHuChaXun/">js原生实现表格模糊查询.....<span class="note">较新</span></a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><div class="line"></div><a id="prev" href="/uncategorized/arrayMethods/">ES6数组方法<span class="note">较新</span></a></section></div>
 
 
 
