@@ -1,3 +1,4 @@
+http://xvnixianshi.com/wiki/index.html
 http://xvnixianshi.com/about/index.html
 http://xvnixianshi.com/uncategorized/basicQuote/
 http://xvnixianshi.com/uncategorized/arrayMethods/
@@ -5,7 +6,6 @@ http://xvnixianshi.com/uncategorized/echarts/
 http://xvnixianshi.com/uncategorized/VueThree/
 http://xvnixianshi.com/uncategorized/TimeDd/
 http://xvnixianshi.com/uncategorized/MoHuChaXun/
-http://xvnixianshi.com/wiki/index.html
 http://xvnixianshi.com/friends/index.html
 http://xvnixianshi.com/data/widgets.json
 http://xvnixianshi.com/contact/index.html
