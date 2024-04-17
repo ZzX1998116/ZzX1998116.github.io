@@ -938,7 +938,7 @@ a.lk2:hover {
     </path>
     <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
 </svg>
-<div class="name" style="z-index: 100;">18岁生日快乐</div>
+<div class="name" style="z-index: 100;"><span class="timeh2" style="color: #C5B4E5;font-size: 42px;font-weight: bold;"></span>岁生日快乐</div>
 <div class="happy" style="z-index: 100;">
     <img src="HappyBirthday.png">
 </div>
@@ -964,7 +964,7 @@ a.lk2:hover {
 <div class="Time">
 <div id="wrapper">
     <div id="Noday">
-    <h2 style="color: #fff;">距离你的<span id="timeh2" style="color: #C5B4E5;font-size: 42px;font-weight: bold;"></span>岁生日还有：</h2>
+    <h2 style="color: #fff;">距离你的<span class="timeh2" style="color: #C5B4E5;font-size: 42px;font-weight: bold;"></span>岁生日还有：</h2>
         <div style="display: flex;align-items: center;justify-content: center;">
           <div id="led0" class="autosize" style="border: 10px solid #fff; border-radius: 20px;"></div>
         </div>
@@ -981,7 +981,7 @@ a.lk2:hover {
             const Stateval = calculateAge(2005,5,1,'IF');
             var YesH2 = document.getElementById("Yesday");
             var NoH2 = document.getElementById("Noday");
-            var titleTime = document.getElementById("timeh2");
+            var titleTime = document.getElementsByClassName("timeh2");
             if(Stateval == '当天'){
               YesH2.style.display = 'block'
               NoH2.style.display = 'none'
