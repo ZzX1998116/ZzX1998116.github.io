@@ -989,7 +989,9 @@ a.lk2:hover {
               YesH2.style.display = 'none'
               NoH2.style.display = 'block'
             }
-            titleTime.innerHTML = Yage
+            console.log(titleTime);
+            titleTime[0].innerHTML = Yage;
+            titleTime[1].innerHTML = Yage;
             if(uaWidth > 480){
               comSize = 5;
             }else{
