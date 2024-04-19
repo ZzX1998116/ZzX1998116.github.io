@@ -183,6 +183,17 @@
   const element0 = document.getElementById("Img1");
   const element0g = document.getElementById("Img1g");
   const element1 = document.getElementById("Img2");
+  const element1g = document.getElementById("Img2g");
+  const element2 = document.getElementById("Img3");
+  const element2g = document.getElementById("Img3g");
+  const element3 = document.getElementById("Img4");
+  const element3g = document.getElementById("Img4g");
+  const element4 = document.getElementById("Img5");
+  const element4g = document.getElementById("Img5g");
+  const element5 = document.getElementById("Img6");
+  const element5g = document.getElementById("Img6g");
+
+
   function transformElement0(x, y) {
     let box = element0.getBoundingClientRect();
     let calcX = -(y - box.y - (box.height / 2)) / multiple;
@@ -194,15 +205,63 @@
       // 额外增加一个控制 --per 的变量写入
       element0g.style = `--per: ${percentage}%`;
   }
+  function transformElement1(x, y) {
+    let box = element1.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / multiple;
+    let calcY = (x - box.x - (box.width / 2)) / multiple;
+    const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
 
-  // function transformElement1(x, y) {
-  //   let box = element1.getBoundingClientRect();
-  //   let calcX = -(y - box.y - (box.height / 2)) / multiple;
-  //   let calcY = (x - box.x - (box.width / 2)) / multiple;
+    element1.style.transform = "rotateX(" + calcX + "deg) "
+      + "rotateY(" + calcY + "deg)";
+      // 额外增加一个控制 --per 的变量写入
+      element1g.style = `--per: ${percentage}%`;
+  }
+  function transformElement2(x, y) {
+    let box = element2.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / multiple;
+    let calcY = (x - box.x - (box.width / 2)) / multiple;
+    const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
 
-  //   element1.style.transform = "rotateX(" + calcX + "deg) "
-  //     + "rotateY(" + calcY + "deg)";
-  // }
+    element2.style.transform = "rotateX(" + calcX + "deg) "
+      + "rotateY(" + calcY + "deg)";
+      // 额外增加一个控制 --per 的变量写入
+      element2g.style = `--per: ${percentage}%`;
+  }
+  function transformElement3(x, y) {
+    let box = element3.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / multiple;
+    let calcY = (x - box.x - (box.width / 2)) / multiple;
+    const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
+
+    element3.style.transform = "rotateX(" + calcX + "deg) "
+      + "rotateY(" + calcY + "deg)";
+      // 额外增加一个控制 --per 的变量写入
+      element3g.style = `--per: ${percentage}%`;
+  }
+  function transformElement4(x, y) {
+    let box = element4.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / multiple;
+    let calcY = (x - box.x - (box.width / 2)) / multiple;
+    const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
+
+    element4.style.transform = "rotateX(" + calcX + "deg) "
+      + "rotateY(" + calcY + "deg)";
+      // 额外增加一个控制 --per 的变量写入
+      element4g.style = `--per: ${percentage}%`;
+  }
+  function transformElement5(x, y) {
+    let box = element5.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / multiple;
+    let calcY = (x - box.x - (box.width / 2)) / multiple;
+    const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
+
+    element5.style.transform = "rotateX(" + calcX + "deg) "
+      + "rotateY(" + calcY + "deg)";
+      // 额外增加一个控制 --per 的变量写入
+      element5g.style = `--per: ${percentage}%`;
+  }
+
+
 
   mouseOverContainer[0].addEventListener('mousemove', (e) => {
     window.requestAnimationFrame(function () {
@@ -214,11 +273,56 @@
       element0.style.transform = "rotateX(0) rotateY(0)";
     });
   });
-  // mouseOverContainer[1].addEventListener('mousemove', (e) => {
-  //   window.requestAnimationFrame(function () {
-  //     transformElement1(e.clientX, e.clientY);
-  //   });
-  // });
+  mouseOverContainer[1].addEventListener('mousemove', (e) => {
+    window.requestAnimationFrame(function () {
+      transformElement1(e.clientX, e.clientY);
+    });
+  });
+  mouseOverContainer[1].addEventListener('mouseleave', (e) => {
+    window.requestAnimationFrame(function () {
+      element1.style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
+  mouseOverContainer[2].addEventListener('mousemove', (e) => {
+    window.requestAnimationFrame(function () {
+      transformElement2(e.clientX, e.clientY);
+    });
+  });
+  mouseOverContainer[2].addEventListener('mouseleave', (e) => {
+    window.requestAnimationFrame(function () {
+      element2.style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
+  mouseOverContainer[3].addEventListener('mousemove', (e) => {
+    window.requestAnimationFrame(function () {
+      transformElement3(e.clientX, e.clientY);
+    });
+  });
+  mouseOverContainer[3].addEventListener('mouseleave', (e) => {
+    window.requestAnimationFrame(function () {
+      element3.style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
+  mouseOverContainer[4].addEventListener('mousemove', (e) => {
+    window.requestAnimationFrame(function () {
+      transformElement4(e.clientX, e.clientY);
+    });
+  });
+  mouseOverContainer[4].addEventListener('mouseleave', (e) => {
+    window.requestAnimationFrame(function () {
+      element4.style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
+  mouseOverContainer[5].addEventListener('mousemove', (e) => {
+    window.requestAnimationFrame(function () {
+      transformElement5(e.clientX, e.clientY);
+    });
+  });
+  mouseOverContainer[5].addEventListener('mouseleave', (e) => {
+    window.requestAnimationFrame(function () {
+      element5.style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
 </script>
 
 </html>
