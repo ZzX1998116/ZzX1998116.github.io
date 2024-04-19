@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>3D卡片反光闪烁动效</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   </head>
+
+    <style>
+    /* 动态粒子 */
+    html,
+    body {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #000;
+      cursor: pointer;
+    }
+    </style>
+<body>
+  <div id="Pcpro">
+    <css-doodle grid="100x100">
+    :doodle {
+        @size: 100vw 100vmin;
+        perspective: 10px;
+    }
+    :container {
+      perspective: 10px;
+      transform-style: preserve-3d;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: @r(5px, 8px);
+    height: @r(5px, 8px);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    background: hsl(@r(1, 255, 3), @r(70%, 90%), @r(70%, 90%));
+    animation: move 30s infinite 0s @p(ease-in) alternate;
+    transform: rotate(@r(180, -360)deg) translate3d(@r(-50, 50, 3)vw, @r(-50, 50, 3)vh, @r(-100, 20)px);
+    zoom: @rn(.1, 5, 3);
+    box-shadow: 0 0 @r(5px, 15px) #fff, 0 0 @r(5px, 15px) #fff;
+    @keyframes move {
+        100% {
+            margin:500px;
+        }
+    }
+    </css-doodle>
+    <div class="body">
+      <div class="main-content">
+        <div class="year">
+        </div>
+        <div class="month"></div>
+        <div class="day"></div>
+        <div class="week"></div>
+        <div class="shichen"></div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+      </div>
+    </div>
+  </div>
+  
+  <span>本效果使用<a href="https://github.com/chokcoco/iCSS/issues/254">github文档</a>创建。</span>
+  </body>
+  <!-- 动态粒子 -->
+  <script>
+    const doodle = document.querySelector('css-doodle')
+    document.addEventListener('click', function (e) {
+      doodle.update()
+    })
+  </script>
+</html>
