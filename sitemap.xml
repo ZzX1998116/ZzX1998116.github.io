@@ -151,27 +151,6 @@
   </url>
   
   <url>
-    <loc>http://xvnixianshi.com/tags/vue/</loc>
-    <lastmod>2024-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://xvnixianshi.com/tags/%E6%89%A9%E5%B1%95/</loc>
-    <lastmod>2024-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://xvnixianshi.com/tags/%E6%9C%80%E6%96%B0/</loc>
-    <lastmod>2024-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://xvnixianshi.com/tags/%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8/</loc>
     <lastmod>2024-04-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -194,6 +173,27 @@
   
   <url>
     <loc>http://xvnixianshi.com/tags/uview/</loc>
+    <lastmod>2024-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://xvnixianshi.com/tags/vue/</loc>
+    <lastmod>2024-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://xvnixianshi.com/tags/%E6%89%A9%E5%B1%95/</loc>
+    <lastmod>2024-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://xvnixianshi.com/tags/%E6%9C%80%E6%96%B0/</loc>
     <lastmod>2024-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
