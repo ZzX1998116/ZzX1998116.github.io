@@ -1,86 +1,224 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>3D卡片反光闪烁动效</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.6.1/css-doodle.min.js"></script>
-   </head>
 
-    <style>
-    /* 动态粒子 */
-    html,
-    body {
-      position: relative;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background-color: #000;
-      cursor: pointer;
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3D卡片反光闪烁动效</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.6.1/css-doodle.min.js"></script>
+</head>
+
+<style>
+  /* 动态粒子 */
+  html,
+  body {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+    cursor: pointer;
+  }
+
+  #imgList {
+    width: 60vw;
+    height: 80vh;
+    position: fixed;
+    margin: auto;
+    top: 10vh;
+    left: 20vw;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff;
+    border-radius:30px ;
+  }
+
+  .Img {
+    width: 20vw;
+    height: 40vh;
+    transform-style: preserve-3d;
+    display: grid;
+    place-items: center;
+    perspective: 500px;
+    float: left;
+  }
+  #Img1, #Img2, #Img3, #Img4, #Img5, #Img6{
+    width: 60%;
+    height: 80%;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  #Img1g{background: url('./1.jpg');}
+  #Img2g{background: url('./2.jpg');}
+  #Img3g{background: url('./3.jpg');}
+  #Img4g{background: url('./4.jpg');}
+  #Img5g{background: url('./5.jpg');}
+  #Img6g{background: url('./6.jpg');}
+  #Img1g, #Img2g, #Img3g, #Img4g, #Img5g, #Img6g {
+    --per: 30%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+        content: "";
+        display: none;
+        position: absolute;
+        inset: 0;
+        /* border-radius: 10px; */
+        background: url("./sparkles.gif");
+        mix-blend-mode: color-dodge;
     }
-    #imgList{
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
+    
+    &::before {
+        content: "";
+        display: none;
+        position: absolute;
+        inset: 0;
+        /* border-radius: 10px; */
+        background: 
+            linear-gradient(
+                115deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.7) var(--per), 
+                rgba(0, 0, 0, .6) calc(var(--per) + 25%), 
+                rgba(255, 255, 255, .5) calc(var(--per) + 50%), 
+                transparent 100%
+            );
+        mix-blend-mode: color-dodge;
     }
-    #Img1{
-      width: 200px;
-      height: 200px;
-      background: #FFF;
-      margin: 20px;
-      transform-style: preserve-3d;
+    
+    &:hover::after,
+    &:hover::before {
+        display: block;
     }
-    </style>
+  }
+</style>
+
 <body>
   <div id="Pcpro">
     <css-doodle grid="100x100">
       :doodle {
-        @size: 100vw 100vmin;
-        perspective: 10px;
-    }
-    :container {
+      @size: 100vw 100vmin;
+      perspective: 10px;
+      }
+      :container {
       perspective: 10px;
       transform-style: preserve-3d;
-    }
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: @r(2px, 8px);
-    height: @r(2px, 8px);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    background: hsl(@r(1, 255, 3), @r(50%, 90%), @r(50%, 90%));
-    animation: move 10s infinite @r(-10, 0)s @p(linear, ease-in, ease-in-out) alternate;
-    transform: scale(@r(1, 10, 3)) translate3d(@r(-50, 50, 3)vw, @r(-50, 50, 3)vh, @r(-100, 20)px);
-    zoom: @rn(.1, 5, 3);
-    box-shadow: 0 0 5px #fff, 0 0 8px #fff;
-    @keyframes move {
-        100% {
-            margin:500px;
-        }
-    }
+      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: @r(2px, 8px);
+      height: @r(2px, 8px);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      background: hsl(@r(1, 255, 3), @r(50%, 90%), @r(50%, 90%));
+      animation: move 10s infinite @r(-10, 0)s @p(linear, ease-in, ease-in-out) alternate;
+      transform: scale(@r(1, 10, 3)) translate3d(@r(-50, 50, 3)vw, @r(-50, 50, 3)vh, @r(-100, 20)px);
+      zoom: @rn(.1, 5, 3);
+      box-shadow: 0 0 5px #fff, 0 0 8px #fff;
+      @keyframes move {
+      100% {
+      margin:500px;
+      }
+      }
     </css-doodle>
     <div id="imgList">
-      <div id="Img1"></div>
+      <div class="Img">
+        <div id="Img1">
+          <div id="Img1g"></div>
+        </div>
+      </div>
+      <div class="Img">
+        <div id="Img2">
+          <div id="Img2g"></div>
+        </div>
+      </div>
+      <div class="Img">
+        <div id="Img3">
+          <div id="Img3g"></div>
+        </div>
+      </div>
+      <div class="Img">
+        <div id="Img4">
+          <div id="Img4g"></div>
+        </div>
+      </div>
+      <div class="Img">
+        <div id="Img5">
+          <div id="Img5g"></div>
+        </div>
+      </div>
+      <div class="Img">
+        <div id="Img6">
+          <div id="Img6g"></div>
+        </div>
+      </div>
     </div>
   </div>
-  
-  <span style="position: fixed;bottom: 20px;color: #fff;">本效果使用<a href="https://github.com/chokcoco/iCSS/issues/254">github文档</a>创建。</span>
-  </body>
-  <!-- 动态粒子 -->
-  <script>
-    const doodle = document.querySelector('css-doodle')
-    document.addEventListener('click', function (e) {
-      doodle.update()
-    })
-  </script>
+
+  <span style="position: fixed;bottom: 20px;color: #fff;">本效果使用<a
+      href="https://github.com/chokcoco/iCSS/issues/254">github文档</a>创建。</span>
+</body>
+<!-- 动态粒子 -->
+<script>
+  const doodle = document.querySelector('css-doodle')
+  document.addEventListener('click', function (e) {
+    doodle.update()
+  })
+</script>
+<!-- 3D卡片 -->
+<script>
+  const multiple = 20;
+  const mouseOverContainer = document.getElementsByClassName("Img");
+  const element0 = document.getElementById("Img1");
+  const element0g = document.getElementById("Img1g");
+  const element1 = document.getElementById("Img2");
+  function transformElement0(x, y) {
+    let box = element0.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / multiple;
+    let calcY = (x - box.x - (box.width / 2)) / multiple;
+    const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
+
+    element0.style.transform = "rotateX(" + calcX + "deg) "
+      + "rotateY(" + calcY + "deg)";
+      // 额外增加一个控制 --per 的变量写入
+      element0g.style = `--per: ${percentage}%`;
+  }
+
+  // function transformElement1(x, y) {
+  //   let box = element1.getBoundingClientRect();
+  //   let calcX = -(y - box.y - (box.height / 2)) / multiple;
+  //   let calcY = (x - box.x - (box.width / 2)) / multiple;
+
+  //   element1.style.transform = "rotateX(" + calcX + "deg) "
+  //     + "rotateY(" + calcY + "deg)";
+  // }
+
+  mouseOverContainer[0].addEventListener('mousemove', (e) => {
+    window.requestAnimationFrame(function () {
+      transformElement0(e.clientX, e.clientY);
+    });
+  });
+  mouseOverContainer[0].addEventListener('mouseleave', (e) => {
+    window.requestAnimationFrame(function () {
+      element0.style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
+  // mouseOverContainer[1].addEventListener('mousemove', (e) => {
+  //   window.requestAnimationFrame(function () {
+  //     transformElement1(e.clientX, e.clientY);
+  //   });
+  // });
+</script>
+
 </html>
