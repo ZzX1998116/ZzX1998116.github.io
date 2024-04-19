@@ -28,7 +28,7 @@
 <body>
   <div id="Pcpro">
     <css-doodle grid="100x100">
-    :doodle {
+      :doodle {
         @size: 100vw 100vmin;
         perspective: 10px;
     }
@@ -39,16 +39,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: @r(5px, 8px);
-    height: @r(5px, 8px);
+    width: @r(2px, 8px);
+    height: @r(2px, 8px);
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    background: hsl(@r(1, 255, 3), @r(70%, 90%), @r(70%, 90%));
-    animation: move 30s infinite 0s @p(ease-in) alternate;
-    transform: rotate(@r(180, -360)deg) translate3d(@r(-50, 50, 3)vw, @r(-50, 50, 3)vh, @r(-100, 20)px);
+    background: hsl(@r(1, 255, 3), @r(50%, 90%), @r(50%, 90%));
+    animation: move 10s infinite @r(-10, 0)s @p(linear, ease-in, ease-in-out) alternate;
+    transform: scale(@r(1, 10, 3)) translate3d(@r(-50, 50, 3)vw, @r(-50, 50, 3)vh, @r(-100, 20)px);
     zoom: @rn(.1, 5, 3);
-    box-shadow: 0 0 @r(5px, 15px) #fff, 0 0 @r(5px, 15px) #fff;
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff;
     @keyframes move {
         100% {
             margin:500px;
